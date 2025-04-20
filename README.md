@@ -19,16 +19,18 @@ Allows any registered user to fetch their own registered name directly from the 
 - If the user is not registered, an error message is shown.
 
 #### Solidity Contract
-function getMyName() public view returns (string memory) {
+```function getMyName() public view returns (string memory) {
   require(
     people[msg.sender].walletAddress != address(0),
     "You are not registered"
   );
   return people[msg.sender].name;
 }
+```
 
 #### Frontend (React Example)
 
+```
 const [myFetchedName, setMyFetchedName] = useState("");
 const [isFetchingName, setIsFetchingName] = useState(false);
 
@@ -42,6 +44,7 @@ const handleGetMyName = async () => {
   }
   setIsFetchingName(false);
 };
+```
 
 
 ---
@@ -53,4 +56,6 @@ Displays the total number of users who have registered on the platform.
 
 #### Frontend (React Example)
 
-<p>Total Registered Users: {people.length}</p> 
+```
+<p>Total Registered Users: {people.length}</p>
+```
