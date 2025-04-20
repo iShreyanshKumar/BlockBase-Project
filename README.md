@@ -60,3 +60,6 @@ Displays the total number of users who have registered on the platform.
 ```
 <p>Total Registered Users: {people.length}</p>
 ```
+#### The above code results in
+<img src="https://github.com/iShreyanshKumar/BlockBase-Project/blob/main/Screenshot%202025-04-20%20232127.png" alt="">
+---
