@@ -48,3 +48,25 @@ Displays the total number of users who have registered on the platform.
 Frontend Part:
 <p>Total Registered Users: {people.length}</p>
 
+# Expense Splitter DApp
+
+This DApp allows users to transparently split and track expenses on the blockchain. It leverages smart contracts for secure and transparent record-keeping, and a React-based frontend for user interaction.
+
+---
+
+## Key Features
+
+### 1. Get My Name
+
+**Description:**  
+Allows any registered user to fetch their own registered name directly from the smart contract.
+
+#### How It Works
+
+- The Solidity contract provides a `getMyName()` function.
+- When a user clicks the **"Get My Name"** button in the DApp, it calls this function.
+- The function returns the name associated with the connected wallet address.
+- If the user is not registered, an error message is shown.
+
+#### Solidity Contract
+
