@@ -20,17 +20,11 @@ Allows any registered user to fetch their own registered name directly from the 
 
 #### Solidity Contract
 function getMyName() public view returns (string memory) {
-
-require(
-
-people[msg.sender].walletAddress != address(0),
-
-"You are not registered"
-
-);
-
-return people[msg.sender].name;
-
+  require(
+    people[msg.sender].walletAddress != address(0),
+    "You are not registered"
+  );
+  return people[msg.sender].name;
 }
 
 #### Frontend (React Example)
@@ -39,14 +33,14 @@ const [myFetchedName, setMyFetchedName] = useState("");
 const [isFetchingName, setIsFetchingName] = useState(false);
 
 const handleGetMyName = async () => {
-setIsFetchingName(true);
-try {
-const name = await contract.getMyName();
-setMyFetchedName(name);
-} catch (err) {
-setMyFetchedName("Not registered or error fetching name.");
-}
-setIsFetchingName(false);
+  setIsFetchingName(true);
+  try {
+    const name = await contract.getMyName();
+    setMyFetchedName(name);
+  } catch (err) {
+    setMyFetchedName("Not registered or error fetching name.");
+  }
+  setIsFetchingName(false);
 };
 
 
