@@ -14,18 +14,18 @@ The function returns the name associated with the connected wallet address.
 
 If the user is not registered, an error message is shown.
 
-Solidity Part: 
-'''
-function getMyName() public view returns (string memory) {
-    require(
-        people[msg.sender].walletAddress != address(0),
-        "You are not registered"
-    );
-    return people[msg.sender].name;
-}
-'''
+###Solidity Part: 
 
-Frontend Part:
+>function getMyName() public view returns (string memory) {
+>    require(
+>        people[msg.sender].walletAddress != address(0),
+>        "You are not registered"
+>    );
+>    return people[msg.sender].name;
+>}
+
+
+###Frontend Part:
 
 const [myFetchedName, setMyFetchedName] = useState("");
 const [isFetchingName, setIsFetchingName] = useState(false);
