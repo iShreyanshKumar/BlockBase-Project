@@ -20,9 +20,9 @@ Allows any registered user to fetch their own registered name directly from the 
 
 #### Solidity Contract
 ```function getMyName() public view returns (string memory) {
-  require(
-    people[msg.sender].walletAddress != address(0),
-    "You are not registered"
+require(
+  people[msg.sender].walletAddress != address(0),
+  "You are not registered"
   );
   return people[msg.sender].name;
 }
